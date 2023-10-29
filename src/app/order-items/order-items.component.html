@@ -1,0 +1,25 @@
+<div class="container">
+  <table class="table" *ngIf="orderItems">
+    <thead>
+    <tr>
+      <th>ID</th>
+      <th>PRODUCT ID</th>
+      <th>PRICE</th>
+      <th>DISCOUNT</th>
+      <th>PRODUCT NAME</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let o of orderItems.productItems">
+      <td>{{o.id}}</td>
+      <td>{{o.productId}}</td>
+      <td>{{o.price|number:".2-2"}}</td>
+      <td>{{o.discount|number:".2-2"}}</td>
+      <td>{{o.product.name}}</td>
+    </tr>
+    </tbody>
+
+  </table>
+
+</div>
+

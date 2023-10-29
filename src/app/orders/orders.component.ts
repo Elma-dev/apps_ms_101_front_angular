@@ -28,4 +28,7 @@ export class OrdersComponent implements OnInit{
   }
 
 
+  showDetails(o: any) {
+    this.router.navigateByUrl("/order_items/"+o.id);
+  }
 }
